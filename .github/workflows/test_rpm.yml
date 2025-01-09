@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  FLUTTER_VERSION: "3.13.8"
+  FLUTTER_VERSION: "3.24.5"
 
 jobs:
   build:
@@ -75,7 +75,7 @@ jobs:
           fi
 
       - name: Upload rpm file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rpm-result
           path: ${{ steps.find_rpm.outputs.rpm_path }}
